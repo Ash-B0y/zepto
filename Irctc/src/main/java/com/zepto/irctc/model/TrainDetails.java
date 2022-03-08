@@ -19,6 +19,22 @@ public class TrainDetails implements Serializable {
 	@Id
 	@Column(name="coach_no")
 	private String coachNo;
+
+	public TrainDetails() {
+	}
+
+	public TrainDetails(String coachNo, String coachType, int trainId, String trainName, String trainSource, String trainDestination, String trainSourceStation, String trainDestinationStation, int availableSeats) {
+		this.coachNo = coachNo;
+		this.coachType = coachType;
+		this.trainId = trainId;
+		this.trainName = trainName;
+		this.trainSource = trainSource;
+		this.trainDestination = trainDestination;
+		this.trainSourceStation = trainSourceStation;
+		this.trainDestinationStation = trainDestinationStation;
+		this.availableSeats = availableSeats;
+	}
+
 	@Column(name="coach_type")
 	private String coachType;
 	@Id
@@ -36,7 +52,7 @@ public class TrainDetails implements Serializable {
 	private String trainDestinationStation;
 	@Column(name="available_seats")
 	private int availableSeats;
-	
+
 	public String getCoachNo() {
 		return coachNo;
 	}
