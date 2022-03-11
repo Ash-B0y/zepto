@@ -17,5 +17,6 @@ public interface AdminRepository extends JpaRepository<TrainDetails, TrainDetail
 	
 	@Query("select t from TrainDetails t where t.coachType=:coachType and t.trainId=:trainId")
 	List<TrainDetails> fetchCoaches(@Param("coachType") String coachType,@Param("trainId") int trainId);
+	
 
 }
